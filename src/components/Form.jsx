@@ -51,10 +51,14 @@ const Form = () => {
     }),
   };
 
+  const [val, setVal] = useState();
+
   const onSubmit = (data) => {
     console.log(data);
     window.alert("User Registered Successfully");
+    setVal([]);
     reset();
+    window.location.reload();
   };
 
   return (
@@ -168,7 +172,7 @@ const Form = () => {
                 closeMenuOnSelect={false}
                 options={options}
                 name={name}
-                value={value}
+                value={val}
                 ref={ref}
                 onBlur={onBlur}
                 onChange={(e) => {
