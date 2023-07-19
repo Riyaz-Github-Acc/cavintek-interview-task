@@ -51,11 +51,9 @@ const Form = () => {
     }),
   };
 
-  const [successMsg, setSuccessMsg] = useState(null);
-
   const onSubmit = (data) => {
     console.log(data);
-    setSuccessMsg("User Registered Successfully");
+    window.alert("User Registered Successfully");
     reset();
   };
 
@@ -237,8 +235,6 @@ const Form = () => {
           <button>Register</button>
         </div>
       </form>
-
-      <div className="success">{successMsg}</div>
     </div>
   );
 };
